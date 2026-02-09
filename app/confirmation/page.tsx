@@ -58,6 +58,7 @@ export default function ConfirmationPage() {
         <button className="w-full bg-salama-teal-dark text-white py-4 rounded-full font-medium hover:opacity-90 transition-opacity">
           Download Policy
         </button>
+        
 
         {/* Other Products Section */}
         <div>
