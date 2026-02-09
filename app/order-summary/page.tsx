@@ -46,6 +46,7 @@ export default function OrderSummaryPage() {
           <span className="text-salama-teal-dark font-medium">Review your info</span>
           <ChevronRight className="w-5 h-5 text-salama-teal-dark" />
         </button>
+        
 
         {/* Policy Information Card */}
         <div className="card border-2 border-salama-teal-light">
