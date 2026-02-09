@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900;
+    font-family: 'Aptos', 'Segoe UI', 'Segoe UI Web', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  * {
+    font-family: 'Aptos', 'Segoe UI', 'Segoe UI Web', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  }
+}
+
+@layer utilities {
+  /* Mobile-first content wrapper - constrained width for web */
+  .content-container {
+    @apply w-full mx-auto px-4;
+    max-width: 100%;
+  }
+  
+  /* Keep mobile width even on larger screens - max 480px for mobile-first */
+  @media (min-width: 640px) {
+    .content-container {
+      max-width: 480px;
+    }
+  }
+  
+  /* Slow rotation animation */
+  @keyframes spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .animate-spin-slow {
+    animation: spin-slow 3s linear infinite;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-salama-teal-dark text-white px-6 py-3 rounded-2xl font-medium hover:bg-opacity-90 transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-2xl font-medium hover:bg-gray-50 transition-colors;
+  }
+  
+  .btn-yellow {
+    @apply bg-salama-yellow text-gray-900 px-6 py-3 rounded-2xl font-medium hover:bg-opacity-90 transition-colors;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-sm p-4;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 rounded-lg border border-gray-300 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-salama-teal-dark focus:border-transparent;
+  }
+  
+  /* Custom slider styles */
+  .slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #F7C513;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #F7C513;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+}
